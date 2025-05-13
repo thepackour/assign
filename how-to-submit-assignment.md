@@ -57,6 +57,9 @@ remote repo에서 데이터 가져오기 (fetch + merge)
 ``git status``
 현재 git 프로젝트의 상태 표시
 
+``git branch --d [branch_name]``
+branch 삭제 (현재 작업중인 branch는 안됨)
+
 ### 그 외 유의사항
 - 입력란 맨 앞이 ``$``가 아닌 ``:``인 경우 ``q``누르기
 - ``git commit`` 후 다시 ``git add`` 해줘야 함
