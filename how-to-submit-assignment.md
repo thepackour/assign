@@ -14,7 +14,7 @@
 - ``git checkout [branch_name]``
 
 ### 5. 작업 및 push 완료
-- commit 메시지로 뭐 했는지 적기 (영어 적으면 깨짐)
+- commit 메시지로 뭐 했는지 적기 (한글 적으면 깨짐)
 
 ### 6. Pull requests - Compare & pull request
 - 변경 사항이 있으면 알아서 'Compare & pull request'가 나옴

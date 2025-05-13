@@ -1,29 +1,30 @@
-public class ProductOrderMain {
-    public static void main(String[] args) {
-        ProductOrder product1 = new ProductOrder();
-        product1.productName = "두부";
-        product1.price = 2000;
-        product1.quantity = 2;
+public class ProductOrderMain2 {
+    static ProductOrder createOrder(String productName, int price, int quantity) {
+        ProductOrder productOrder = new ProductOrder();
+        productOrder.productName = productName;
+        productOrder.price = price;
+        productOrder.quantity = quantity;
+        return productOrder;
+    }
 
-        ProductOrder product2 = new ProductOrder();
-        product2.productName = "김치";
-        product2.price = 5000;
-        product2.quantity = 1;
-
-        ProductOrder product3 = new ProductOrder();
-        product3.productName = "콜라";
-        product3.price = 1500;
-        product3.quantity = 2;
-
-        int total = 0;
-
-        ProductOrder[] products = {product1, product2, product3};
-
-        for (ProductOrder product : products) {
-            System.out.println("상품명: " + product.productName + ", 가격: " + product.price + ", 수량: " + product.quantity);
-            total += product.quantity * product.price;
+    static void printOrders(ProductOrder[] orders) {
+        for (ProductOrder order : orders) {
+            System.out.println("상품명: " + order.productName + ", 가격: " + order.price + ", 수량: " + order.quantity);
         }
+    }
 
-        System.out.println("총 결제 금액: " + total);
+    static int getTotalAmount(ProductOrder[] orders) {
+        int total = 0;
+        for (ProductOrder order : orders) total += order.quantity * order.price;
+        return total;
+    }
+
+    public static void main(String[] args) {
+        ProductOrder[] productOrders = new ProductOrder[3];
+        productOrders[0] = createOrder("두부", 2000, 2);
+        productOrders[1] = createOrder("김치", 5000, 1);
+        productOrders[2] = createOrder("콜라", 1500, 2);
+
+        System.out.println("총 결제 금액: " + getTotalAmount(productOrders));
     }
 }
