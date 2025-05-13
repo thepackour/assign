@@ -14,7 +14,7 @@
 - ``git checkout [branch_name]``
 
 ### 5. 작업 및 push 완료
-- commit 메시지로 뭐 했는지 적기 (영어 적으면 깨짐)
+- commit 메시지로 뭐 했는지 적기 (한글 적으면 깨짐)
 
 ### 6. Pull requests - Compare & pull request
 - 변경 사항이 있으면 알아서 'Compare & pull request'가 나옴
@@ -56,6 +56,9 @@ remote repo에서 데이터 가져오기 (fetch + merge)
 
 ``git status``
 현재 git 프로젝트의 상태 표시
+
+``git branch --d [branch_name]``
+branch 삭제 (현재 작업중인 branch는 안됨)
 
 ### 그 외 유의사항
 - 입력란 맨 앞이 ``$``가 아닌 ``:``인 경우 ``q``누르기
